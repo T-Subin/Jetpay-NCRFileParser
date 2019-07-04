@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{25180F57-4B7A-485F-BB5F-8E3DFBA80079}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>JetPayFileParser.DataAccess</RootNamespace>
+    <AssemblyName>JetPayFileParser.DataAccess</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ACHAuthDAL.cs" />
+    <Compile Include="AdjustmentReservesDAL.cs" />
+    <Compile Include="ChargebackDAL.cs" />
+    <Compile Include="CommonDAL.cs" />
+    <Compile Include="DepFundingDAL.cs" />
+    <Compile Include="DepositFeeDAL.cs" />
+    <Compile Include="FileImportLogDAL.cs" />
+    <Compile Include="FundingCategoryDAL.cs" />
+    <Compile Include="FundingDetailDAL.cs" />
+    <Compile Include="MerchantFileDAL.cs" />
+    <Compile Include="ProcessorAuthDAL.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QualificationDAL.cs" />
+    <Compile Include="ReservesDAL.cs" />
+    <Compile Include="RiskHistoryDAL.cs" />
+    <Compile Include="SettledDal.cs" />
+    <Compile Include="SettlementDetailDAL.cs" />
+    <Compile Include="SqlHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\JetPayFileParser.Model\JetPayFileParser.Model.csproj">
+      <Project>{bba22543-d01f-444c-bfe2-989e722306e9}</Project>
+      <Name>JetPayFileParser.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JetPayFileParser.Utility\JetPayFileParser.Utility.csproj">
+      <Project>{ba6897e5-3700-4d71-ad12-cb4821a2d80a}</Project>
+      <Name>JetPayFileParser.Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

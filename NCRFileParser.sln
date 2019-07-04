@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JetPayFileParser", "JetPayFileParser\JetPayFileParser.csproj", "{8BF13269-2BD9-4C0A-8F20-CC1294988E04}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JetPayFileParser.Business", "JetPayFileParser.Business\JetPayFileParser.Business.csproj", "{F8365253-BC56-420B-BAFD-44AA07BFE227}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JetPayFileParser.DataAccess", "JetPayFileParser.DataAccess\JetPayFileParser.DataAccess.csproj", "{25180F57-4B7A-485F-BB5F-8E3DFBA80079}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JetPayFileParser.Model", "JetPayFileParser.Model\JetPayFileParser.Model.csproj", "{BBA22543-D01F-444C-BFE2-989E722306E9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JetPayFileParser.Utility", "JetPayFileParser.Utility\JetPayFileParser.Utility.csproj", "{BA6897E5-3700-4D71-AD12-CB4821A2D80A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8BF13269-2BD9-4C0A-8F20-CC1294988E04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BF13269-2BD9-4C0A-8F20-CC1294988E04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BF13269-2BD9-4C0A-8F20-CC1294988E04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BF13269-2BD9-4C0A-8F20-CC1294988E04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8365253-BC56-420B-BAFD-44AA07BFE227}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8365253-BC56-420B-BAFD-44AA07BFE227}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8365253-BC56-420B-BAFD-44AA07BFE227}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8365253-BC56-420B-BAFD-44AA07BFE227}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25180F57-4B7A-485F-BB5F-8E3DFBA80079}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25180F57-4B7A-485F-BB5F-8E3DFBA80079}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25180F57-4B7A-485F-BB5F-8E3DFBA80079}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25180F57-4B7A-485F-BB5F-8E3DFBA80079}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBA22543-D01F-444C-BFE2-989E722306E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBA22543-D01F-444C-BFE2-989E722306E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBA22543-D01F-444C-BFE2-989E722306E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBA22543-D01F-444C-BFE2-989E722306E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA6897E5-3700-4D71-AD12-CB4821A2D80A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA6897E5-3700-4D71-AD12-CB4821A2D80A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA6897E5-3700-4D71-AD12-CB4821A2D80A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA6897E5-3700-4D71-AD12-CB4821A2D80A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F8365253-BC56-420B-BAFD-44AA07BFE227}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>JetPayFileParser.Business</RootNamespace>
+    <AssemblyName>JetPayFileParser.Business</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Artefacts.Common.Logger, Version=1.0.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Artefacts.Common.Logger.1.0.5\lib\net40\Artefacts.Common.Logger.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="nspring, Version=1.1.1389.36054, Culture=neutral">
+      <HintPath>..\packages\Artefacts.Common.Logger.1.0.5\lib\net40\nspring.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ACHAuthManager.cs" />
+    <Compile Include="AdjustmentReservesManager.cs" />
+    <Compile Include="BulkDataInsertManager.cs" />
+    <Compile Include="ChargebackManager.cs" />
+    <Compile Include="DepositManager.cs" />
+    <Compile Include="DepositFeeManager.cs" />
+    <Compile Include="FileImportLogManager.cs" />
+    <Compile Include="FullFundingManager.cs" />
+    <Compile Include="FundingCategoryManager.cs" />
+    <Compile Include="FundingDepManager.cs" />
+    <Compile Include="FundingDetailManager.cs" />
+    <Compile Include="MerchantFileManager.cs" />
+    <Compile Include="ParseReportManager.cs" />
+    <Compile Include="ProcessorAuthManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QualificationManager.cs" />
+    <Compile Include="ReservesManager.cs" />
+    <Compile Include="RiskHistoryManager.cs" />
+    <Compile Include="SettledManager.cs" />
+    <Compile Include="SettlementDetailManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\JetPayFileParser.DataAccess\JetPayFileParser.DataAccess.csproj">
+      <Project>{25180f57-4b7a-485f-bb5f-8e3dfba80079}</Project>
+      <Name>JetPayFileParser.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JetPayFileParser.Model\JetPayFileParser.Model.csproj">
+      <Project>{bba22543-d01f-444c-bfe2-989e722306e9}</Project>
+      <Name>JetPayFileParser.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JetPayFileParser.Utility\JetPayFileParser.Utility.csproj">
+      <Project>{ba6897e5-3700-4d71-ad12-cb4821a2d80a}</Project>
+      <Name>JetPayFileParser.Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="logger.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
